@@ -18,7 +18,7 @@ const foreword = (params) => {
     content.fillRect(0, 0, width, height)
     if (params.imagePath) {
         loadImage(params.imagePath).then(image => {
-            if (!params.half) {
+            if (params.half) {
                 content.drawImage(
                     image,
                     params.startX  || 0,
@@ -70,23 +70,19 @@ const foreword = (params) => {
             content.font = `normal normal bold ${params.titleSize | 52}px ${params.font || "Simsun"}`
             content.fillStyle = params.fontColor || "#ffffff"
             content.textAlign = "center"
-            if (params.half) {
+            if (!params.half) {
                 content.fillText(text, width / 2, (height / 2) + (params.topOffset || 0))
             } else {
                 content.fillText(text, width - width / 4, (height / 2) + (params.topOffset || 0))
             }
             content.font = `normal normal normal ${params.subSize | 24}px ${params.font || "Simsun"}`
-            if (params.half) {
+            if (!params.half) {
                 content.fillText(author, width / 2, height / 2 + (params.interval || 100))
             } else {
                 content.fillText(author, width - width / 4, height / 2 + (params.interval || 100))
             }
             const buffer = canvas.toBuffer("image/png")
             fs.writeFileSync(params.save || "./foreword.png", buffer)
-            return {
-                "code": 200,
-                "message": "success"
-            }
         })
     } else {
         if (params.linear) {
@@ -107,10 +103,10 @@ const foreword = (params) => {
         content.fillText(author, width / 2, height / 2 + (params.interval || 100))
         const buffer = canvas.toBuffer("image/png")
         fs.writeFileSync(params.save || "./foreword.png", buffer)
-        return {
-            "code": 200,
-            "message": "success"
-        }
+    }
+    return {
+        "code": 200,
+        "message": "success"
     }
 }
 
