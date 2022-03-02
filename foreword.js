@@ -67,7 +67,7 @@ const foreword = (params) => {
             }
             const text = params.content  || "旧时王谢堂前燕，飞入寻常百姓家。"
             const author = params.author || "—— 唐代 刘禹锡 《乌衣巷》"
-            content.font = `normal normal bold ${params.titleSize | 52}px ${params.font || "Simsun"}`
+            content.font = `normal normal bold ${params.titleSize || 52}px ${params.font || "Simsun"}`
             content.fillStyle = params.fontColor || "#ffffff"
             content.textAlign = "center"
             if (!params.half) {
@@ -75,7 +75,7 @@ const foreword = (params) => {
             } else {
                 content.fillText(text, width - width / 4, (height / 2) + (params.topOffset || 0))
             }
-            content.font = `normal normal normal ${params.subSize | 24}px ${params.font || "Simsun"}`
+            content.font = `normal normal normal ${params.subSize || 24}px ${params.font || "Simsun"}`
             if (!params.half) {
                 content.fillText(author, width / 2, height / 2 + (params.interval || 100))
             } else {
@@ -95,11 +95,11 @@ const foreword = (params) => {
         }
         const text = params.content  || "人面不知何处去，桃花依旧笑春风。"
         const author = params.author || "—— 唐代 崔护 《题都城南庄》"
-        content.font = `normal normal bold ${params.titleSize | 52}px ${params.font || "Simsun"}`
+        content.font = `normal normal bold ${params.titleSize || 52.}px ${params.font || "Simsun"}`
         content.fillStyle = params.fontColor || "#ffffff"
         content.textAlign = "center"
         content.fillText(text, width / 2, (height / 2) + (params.topOffset || 0))
-        content.font = `normal normal normal ${params.subSize | 24}px ${params.font || "Simsun"}`
+        content.font = `normal normal normal ${params.subSize || 24}px ${params.font || "Simsun"}`
         content.fillText(author, width / 2, height / 2 + (params.interval || 100))
         const buffer = canvas.toBuffer("image/png")
         fs.writeFileSync(params.save || "./foreword.png", buffer)
