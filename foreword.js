@@ -95,7 +95,7 @@ const foreword = (params) => {
         }
         const text = params.content  || "人面不知何处去，桃花依旧笑春风。"
         const author = params.author || "—— 唐代 崔护 《题都城南庄》"
-        content.font = `normal normal bold ${params.titleSize || 52.}px ${params.font || "Simsun"}`
+        content.font = `normal normal bold ${params.titleSize || 52}px ${params.font || "Simsun"}`
         content.fillStyle = params.fontColor || "#ffffff"
         content.textAlign = "center"
         content.fillText(text, width / 2, (height / 2) + (params.topOffset || 0))
