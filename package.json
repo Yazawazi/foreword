@@ -1,0 +1,27 @@
+{
+  "name": "foreword",
+  "version": "0.1.0",
+  "description": "A program to generate motto images on JavaScript",
+  "main": "foreword.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yazawazi/foreword.git"
+  },
+  "keywords": [
+    "foreword",
+    "motto",
+    "image"
+  ],
+  "author": "Yazawazi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yazawazi/foreword/issues"
+  },
+  "homepage": "https://github.com/Yazawazi/foreword#readme",
+  "dependencies": {
+    "canvas": "^2.9.0"
+  }
+}
