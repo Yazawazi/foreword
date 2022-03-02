@@ -47,4 +47,5 @@ foreword({
 17. `font`: 字体，默认为 `Simsun`；
 18. `fontColor`: 字体颜色，默认为 `#ffffff`；
 19. `interval`: 作者和内容的间隔，默认为 `100`；
-20. `save`: 保存图片文件名，默认为 `./foreword.png`。
+20. `save`: 保存图片文件名，默认为 `./foreword.png`;
+21. `topOffset`: 标题的 `top` 偏移量，默认为 `0`；

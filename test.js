@@ -7,5 +7,6 @@ foreword({
     background: "#ed5a65",
     fontColor: "#ede3e7",
     content: "今年元夜时，月与灯依旧。\n不见去年人，泪湿春衫袖。",
-    author: "—— 宋代 欧阳修 《生查子·元夕》"
+    author: "—— 宋代 欧阳修 《生查子·元夕》",
+    topOffset: -26 // May center?
 })
