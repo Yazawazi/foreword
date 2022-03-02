@@ -2,7 +2,7 @@
 
 这是一个用于生成格言图片的小程序，你可以使用它快速生成格言图片。你需要 Node.js 环境，安装时需要 `npm install`。
 
-## 实例
+## 示例
 
 ```javascript
 const foreword = require("./foreword.js")
